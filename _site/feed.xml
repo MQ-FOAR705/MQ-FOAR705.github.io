@@ -6,8 +6,8 @@
 </description>
     <link>mergeandvary.github.io/</link>
     <atom:link href="mergeandvary.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 07 Apr 2016 14:42:43 +1000</pubDate>
-    <lastBuildDate>Thu, 07 Apr 2016 14:42:43 +1000</lastBuildDate>
+    <pubDate>Thu, 07 Apr 2016 23:23:39 +0000</pubDate>
+    <lastBuildDate>Thu, 07 Apr 2016 23:23:39 +0000</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
@@ -127,7 +127,7 @@ git commit -a -m “Jekyll nectar post”
 git push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
-        <pubDate>Thu, 07 Apr 2016 00:00:00 +1000</pubDate>
+        <pubDate>Thu, 07 Apr 2016 00:00:00 +0000</pubDate>
         <link>mergeandvary.github.io/jekyll/nectar/ssh/2016/04/07/Jekyll-on-NeCTAR.html</link>
         <guid isPermaLink="true">mergeandvary.github.io/jekyll/nectar/ssh/2016/04/07/Jekyll-on-NeCTAR.html</guid>
         
@@ -258,7 +258,7 @@ username.github.io&lt;/p&gt;
 
 &lt;p&gt;Here is a great &lt;a href=&quot;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&quot;&gt;markdown cheat sheet&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 03 Apr 2016 00:00:00 +1100</pubDate>
+        <pubDate>Sun, 03 Apr 2016 00:00:00 +0000</pubDate>
         <link>mergeandvary.github.io/jekyll/update/2016/04/03/welcome-to-jekyll.html</link>
         <guid isPermaLink="true">mergeandvary.github.io/jekyll/update/2016/04/03/welcome-to-jekyll.html</guid>
         
@@ -367,7 +367,7 @@ And after I try reconnecting I get this scary message:&lt;/p&gt;
 
 &lt;p&gt;It finds my host key and removes it from my keychain. Then I just login again. Accept the new ECDSA fingerprint and we’re away!&lt;/p&gt;
 </description>
-        <pubDate>Sun, 03 Apr 2016 00:00:00 +1100</pubDate>
+        <pubDate>Sun, 03 Apr 2016 00:00:00 +0000</pubDate>
         <link>mergeandvary.github.io/nectar/nectarcloud/nectarresearch/research/2016/04/03/setting-up-nectar-cloud.html</link>
         <guid isPermaLink="true">mergeandvary.github.io/nectar/nectarcloud/nectarresearch/research/2016/04/03/setting-up-nectar-cloud.html</guid>
         
