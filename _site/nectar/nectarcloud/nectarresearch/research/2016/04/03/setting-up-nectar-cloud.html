@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Setting up Nectar Cloud with X forwarding over SSH</title>
+  <meta name="description" content="">
+
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,900' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="mergeandvary.github.io/nectar/nectarcloud/nectarresearch/research/2016/04/03/setting-up-nectar-cloud.html">
+  <link rel="alternate" type="application/rss+xml" title="FOAR705 Digital Humanities" href="mergeandvary.github.io/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">FOAR705 Digital Humanities</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Setting up Nectar Cloud with X forwarding over SSH</h1>
+    <p class="post-meta"><time datetime="2016-04-03T00:00:00+00:00" itemprop="datePublished">Apr 3, 2016</time>&nbsp;&nbsp; • &nbsp;&nbsp;<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Cooper B</span></span></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p><img src="https://nectar.org.au/wp-content/uploads/2015/10/nectardirectorate-logo.png" alt="Nectar" /></p>
+
+<p>The government spent a ton of money ($4.94 million allocated in 2015) on National eResearch Collaboration Tools and Resources (NeCTAR) and we get two free machines through the university, so lets set one up.</p>
+
+<p><a href="https://nectar.org.au/">https://nectar.org.au/</a></p>
+
+<h2 id="setting-up-nectar">Setting up NeCTAR</h2>
+<p>Goto Cloud Login</p>
+
+<p>After login through Macquarie, go to Images in the left menu pane.
+Find the NeCTAR Ubuntu 14.04 Image and choose “Launch Instance” from right side.</p>
+
+<p>You can then give your instance a name. Choose your flavour which basically is just how powerful you want your VM to be. Larger sizes increase RAM, Disk Space, and Processing Power – however, they also use more of your NeCTAR alocation.</p>
+
+<p>On the right hand side you can see the details of your flavour and how much of your allocation that it will use. I’m going for the small, as tiny seemed a little too, well, tiny…</p>
+
+<p>Don’t forget to add your SSH key in the Access &amp; Security Tab! I thankfully have Petra’s blog post to follow, yet despite the warnings I was overly eager to set up the VM and missed this step. Had to delete it and restart, because I also think I can just dive in without following instructions… :p</p>
+
+<p>Choose your Key Pair and Check the SSH box</p>
+
+<p>After hitting the green Launch button, the instance will build in the Instances tab on the left (Surprise! Who would have thought.)</p>
+
+<h2 id="launching-into-ssh">Launching into SSH.</h2>
+<p>After the Instance is initialised, get the IP address from Instances tab
+Open Terminal. (I’m using Linux for initial tests. I will switch to Windows once I get it working on Linux).
+I saved my key file to ~/.ssh/Nectar_Key so I ran</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ssh -i ~/.ssh/Nectar_Key ubuntu@ip.address.of.instance</code></pre></figure>
+
+<p>And I got this error!</p>
+
+<p>INSERT IMAGE HERE!!!</p>
+
+<p>So I had to use chmod 600 to change my key’s permissions to only give me (file owner) read/write access (the 6 which is 2 + 4 i.e. read + write bits) and no one else in the file group or outside the file group (the two 0s).
+Then I ran a simple apt-get update / apt-get dist-upgrade on the VM to make sure everything was up to date.</p>
+
+<h2 id="now-on-to-the-fun-part-forwarding-x-over-ssh">Now on to the fun part. Forwarding X over SSH</h2>
+<p>the -X flag for ssh provides X forwarding e.g.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ssh -i ~/.ssh/Nectar_Key ubuntu@ip.address -X</code></pre></figure>
+
+<p>However, I quickly noticed that because we are using a Server image of ubuntu, no X11 tools or GUI elements are installed. I installed them with the following command</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get install ubuntu-desktop</code></pre></figure>
+
+<p>This command needs to fetch about 559mb of archives and uses 2,128mb of space (2.0gb pretty much!). So this is where I’m glad that I chose the Small flavour rather than the Tiny one, as the extra 25gb of space goes a long way!
+Looks like about 25min wait time on MQ network, so I’ll leave this running in my terminal and go do some other work in the meantime. See you soon!</p>
+
+<p>And I’m back…
+Ubuntu desktop has installed. Now I exist my SSH session and relogin with X forwarding enabled.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ssh -i ~/.ssh/Nectar_Key ubuntu@ip.address -X</code></pre></figure>
+
+<p>I know that nautilus is the file browser in Ubuntu, so I type the command <code class="highlighter-rouge">nautilus</code> and hit enter</p>
+
+<p>Success!</p>
+
+<p>Now on to Windows!</p>
+
+<h2 id="the-joy-sarcasm-of-windows">The Joy &lt;/sarcasm&gt; of Windows.</h2>
+<p>PuTTY has the ability for X11 forwarding over SSH.
+HOWEVER, as we’re not in Kansas (Linux) anymore, that means we also need an X server like Xming. 
+As I’m not really that keen on setting up an X server in windows, I’m going to go another route which is using MobaXTerm. MobaXTerm is a terminal program for windows that has an X11 server built in and is free for personal use.
+<a href="http://mobaxterm.mobatek.net/download.html">http://mobaxterm.mobatek.net/download.html</a></p>
+
+<p>When you open mobaXterm you get a home page like this:</p>
+
+<p>IMAGE FILE MISSING</p>
+
+<p>Select Start local terminal
+And then the commands are the same as before. I recommend saving your Nectar_Key pem file on the Desktop. Then you can use the following command:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ssh -i Desktop/Nectar_Key ubuntu@ip.address -X
+nautilus</code></pre></figure>
+
+<p>Success!</p>
+
+<h2 id="terminal-tips">Terminal Tips</h2>
+<p>Don’t forget you can use Ctrl+C as a terminal break command. Nautilus will be running in the terminal window so just switch back to the terminal and hit Ctrl+C to end the process if you need to. You can use an ampersand &amp; at the end of a command to run it as a separate process thread if you still need to do work in the terminal window at the same time. e.g. <code class="highlighter-rouge">nautilus &amp;</code></p>
+
+<h2 id="a-final-note-reseting-nectar-vm">A Final Note: Reseting NeCTAR VM</h2>
+<p>One thing I noticed was that after I installed ubuntu-desktop. Apt-get was telling me that my system needed a restart. Not quite sure how I go about that. I’m going to try in the SSH terminal:
+<code class="highlighter-rouge">sudo shutdown -r now</code></p>
+
+<p>And see if my Nectar VM blows up! 
+Basically the shutdown command tells the machine to, well, shutdown… The -r flag is for reboot and the now at the end tells it to do it now. Pretty self explanatory. 
+After you run the command terminal / putty etc. will kick you out of the SSH session as the machine has gone offline. I’m going to try reconnecting now and see what happens.
+And after I try reconnecting I get this scary message:</p>
+
+<p>IMAGE MISSING</p>
+
+<p>Considering I just rebooted (and its probably related to that) and I’m not that worried about the integrity of my VM, I’m just going to  delete my key and start again:
+<code class="highlighter-rouge">ssh-keygen -R ip.address.of.vm</code></p>
+
+<p>It finds my host key and removes it from my keychain. Then I just login again. Accept the new ECDSA fingerprint and we’re away!</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <em>FOAR705 Digital Humanities</em>
+          <li><a href="mailto:"></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>This unit explores cross-disciplinary approaches to research that fall under the rubric of ‘digital humanities’,  the aim of which is to use technological tools to solve domain problems. and present results in an accessible way.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
