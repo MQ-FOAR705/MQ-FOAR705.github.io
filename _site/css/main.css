@@ -100,13 +100,13 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 .post-meta { font-size: 14px; color: #828282; }
 
-.post-link { display: block; font-weight: 800; font-size: 42px; font-style: italic; color: #777; letter-spacing: -1px; line-height: 1; }
+.post-link { display: block; font-weight: 800; font-size: 36px; font-style: italic; color: #777; letter-spacing: -1px; line-height: 1; }
 .post-link, .post-link:visited { color: #777; }
 
 /** Posts */
 .post-header { margin-bottom: 30px; }
 
-.post-title { font-weight: 800; font-size: 42px; font-style: italic; color: #777; letter-spacing: -1px; line-height: 1; }
+.post-title { font-weight: 800; font-size: 36px; font-style: italic; color: #777; letter-spacing: -1px; line-height: 1; }
 @media screen and (max-width: 800px) { .post-title { font-size: 36px; } }
 
 .post-content { margin-bottom: 30px; }

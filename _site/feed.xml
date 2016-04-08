@@ -4,10 +4,10 @@
     <title>FOAR705 Digital Humanities</title>
     <description>This unit explores cross-disciplinary approaches to research that fall under the rubric of ‘digital humanities’,  the aim of which is to use technological tools to solve domain problems. and present results in an accessible way.
 </description>
-    <link>mergeandvary.github.io/</link>
-    <atom:link href="mergeandvary.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 08 Apr 2016 01:00:08 +0000</pubDate>
-    <lastBuildDate>Fri, 08 Apr 2016 01:00:08 +0000</lastBuildDate>
+    <link>MQ-FOAR705.github.io/</link>
+    <atom:link href="MQ-FOAR705.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 08 Apr 2016 02:47:40 +0000</pubDate>
+    <lastBuildDate>Fri, 08 Apr 2016 02:47:40 +0000</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
@@ -26,8 +26,8 @@ For Raymond, FOSS is particularly valuable when projects require independent pee
 &lt;p&gt;FOSS is frequently criticised as having a free rider problem: why submit patches if doing so only benefits others? Firstly, as noted, academic research requires peer review: obfuscating methods only hinders this process. Moreover, beyond selecting appropriate approaches to research, it is rarely methods that make research valuable. Rather, it is how researchers analyse and interpret collected data so as to advance the existing knowledge in their field. Additionally, according to game theory, whilst intuitively it seems altruistic to submit code to FOSS projects, it is, in fact, optimistically selfish. The cost has already been incurred in creating patches. By not submitting patches, the cost of maintaining patches for subsequent updates falls on the patch holder. Merging patches with source places that cost back onto the community of developers that maintain the project. Furthermore, submission of the patch fosters collaborative involvement amongst the community and therefore increases development.&lt;/p&gt;
 </description>
         <pubDate>Fri, 08 Apr 2016 00:00:00 +0000</pubDate>
-        <link>mergeandvary.github.io/digitalhumanities/dh/writing/raymond/esr/2016/04/08/Why-do-digital-humanities-use-FOSS.html</link>
-        <guid isPermaLink="true">mergeandvary.github.io/digitalhumanities/dh/writing/raymond/esr/2016/04/08/Why-do-digital-humanities-use-FOSS.html</guid>
+        <link>MQ-FOAR705.github.io/digitalhumanities/dh/writing/raymond/esr/2016/04/08/Why-do-digital-humanities-use-FOSS.html</link>
+        <guid isPermaLink="true">MQ-FOAR705.github.io/digitalhumanities/dh/writing/raymond/esr/2016/04/08/Why-do-digital-humanities-use-FOSS.html</guid>
         
         
         <category>digitalhumanities</category>
@@ -160,8 +160,8 @@ git push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
         <pubDate>Thu, 07 Apr 2016 00:00:00 +0000</pubDate>
-        <link>mergeandvary.github.io/jekyll/nectar/ssh/2016/04/07/Jekyll-on-NeCTAR.html</link>
-        <guid isPermaLink="true">mergeandvary.github.io/jekyll/nectar/ssh/2016/04/07/Jekyll-on-NeCTAR.html</guid>
+        <link>MQ-FOAR705.github.io/jekyll/nectar/ssh/2016/04/07/Jekyll-on-NeCTAR.html</link>
+        <guid isPermaLink="true">MQ-FOAR705.github.io/jekyll/nectar/ssh/2016/04/07/Jekyll-on-NeCTAR.html</guid>
         
         
         <category>jekyll</category>
@@ -291,8 +291,8 @@ username.github.io&lt;/p&gt;
 &lt;p&gt;Here is a great &lt;a href=&quot;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&quot;&gt;markdown cheat sheet&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 03 Apr 2016 00:00:00 +0000</pubDate>
-        <link>mergeandvary.github.io/jekyll/update/2016/04/03/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">mergeandvary.github.io/jekyll/update/2016/04/03/welcome-to-jekyll.html</guid>
+        <link>MQ-FOAR705.github.io/jekyll/update/2016/04/03/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">MQ-FOAR705.github.io/jekyll/update/2016/04/03/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>
@@ -400,8 +400,8 @@ And after I try reconnecting I get this scary message:&lt;/p&gt;
 &lt;p&gt;It finds my host key and removes it from my keychain. Then I just login again. Accept the new ECDSA fingerprint and we’re away!&lt;/p&gt;
 </description>
         <pubDate>Sun, 03 Apr 2016 00:00:00 +0000</pubDate>
-        <link>mergeandvary.github.io/nectar/nectarcloud/nectarresearch/research/2016/04/03/setting-up-nectar-cloud.html</link>
-        <guid isPermaLink="true">mergeandvary.github.io/nectar/nectarcloud/nectarresearch/research/2016/04/03/setting-up-nectar-cloud.html</guid>
+        <link>MQ-FOAR705.github.io/nectar/nectarcloud/nectarresearch/research/2016/04/03/setting-up-nectar-cloud.html</link>
+        <guid isPermaLink="true">MQ-FOAR705.github.io/nectar/nectarcloud/nectarresearch/research/2016/04/03/setting-up-nectar-cloud.html</guid>
         
         
         <category>nectar</category>
