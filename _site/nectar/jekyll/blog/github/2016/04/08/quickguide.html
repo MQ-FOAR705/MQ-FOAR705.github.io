@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Quick Guide to Posting on the Blog via NeCTAR</title>
+  <meta name="description" content="This is just a quick guide of the steps I take to post on the blog using a NeCTAR virtual machine">
+
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,900' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="MQ-FOAR705.github.io/nectar/jekyll/blog/github/2016/04/08/quickguide.html">
+  <link rel="alternate" type="application/rss+xml" title="FOAR705 Digital Humanities" href="MQ-FOAR705.github.io/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">FOAR705 Digital Humanities</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Quick Guide to Posting on the Blog via NeCTAR</h1>
+    <p class="post-meta"><time datetime="2016-04-08T00:00:00+00:00" itemprop="datePublished">Apr 8, 2016</time>&nbsp;&nbsp; • &nbsp;&nbsp;<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Cooper B</span></span></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>This is just a quick guide of the steps I take to post on the blog using a NeCTAR virtual machine</p>
+
+<h2 id="nectar-virtual-machine">NeCTAR Virtual Machine</h2>
+<p><a href="https://nectar.org.au/">https://nectar.org.au/</a></p>
+
+<ol>
+  <li>Go to <em>Cloud Login</em> and login with university credentials</li>
+  <li>Click <em>Instances</em> in left tab and then select <em>Launch Instance</em> on the right</li>
+  <li>Give your instance a name, change flavour to m2.small</li>
+  <li>Choose <em>NeCTAR Fedora 23 x86_64 (450.1 MB)</em> for Image Name</li>
+  <li>Click Access and Security tab and choose your key pair and select SSH</li>
+  <li>Hit the <em>Launch</em> button</li>
+</ol>
+
+<p>Now our instance will start up. Give it a moment to initialise/spawn. Once it is done, grab the IP address so we can login via SSH.
+SSH Login via your preferred method - Linux terminal, PuTTY, MobaXTerm etc.</p>
+
+<p>NOTE - The user name for the fedora machine is <em>ec2-user</em></p>
+
+<p>For PuTTY we put <em>ec2-user@255.255.255.255</em> in the Host Name box under Session, replacing the 255.255.255.255 with the IP address of our NeCTAR virtual machine. You also need to add your user key under Connection &gt; SSH &gt; Auth</p>
+
+<h2 id="cloning-the-github">Cloning the GitHub</h2>
+<p>We already have github setup so lets clone it and work from there.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo dnf install git
+git clone https://github.com/MQ-FOAR705/MQ-FOAR705.github.io.git</code></pre></figure>
+
+<p>You might want to use the SSH method of cloning (rather than the https one I’m using here) that Brian discussed in class, assuming that you have setup your SSH keypair. I’ll leave this up to someone else to write a quick tutorial on.</p>
+
+<h2 id="installing-jekyll">Installing Jekyll</h2>
+<p>Now that we have the github cloned, lets navigate to that folder and install the jekyll github pages gem bundle. In the github I’ve already setup a Gemfile so we are all ready to go and install.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo dnf install ruby-devel redhat-rpm-config gcc zlib-devel nodejs
+<span class="nb">cd </span>MQ-FOAR705.github.io
+gem install bundler
+bundle install</code></pre></figure>
+
+<h2 id="writing-a-post">Writing a Post</h2>
+<p>Before we write a post, we want to make sure we have the latest files from git, so we need to run <code class="highlighter-rouge">git pull</code> from the MQ-FOAR705.github.io directory. This is a really important step so that we avoid any commit conflicts. Once git pull has been done, we can <code class="highlighter-rouge">cd _posts</code> to get into the _posts directory to create a post.</p>
+
+<p>I’m just going to use nano for my text editor, but you might prefer something else.</p>
+
+<p><code class="highlighter-rouge">sudo dnf install nano</code></p>
+
+<p>Now lets make a post. The naming structure of the post is:</p>
+
+<p><code class="highlighter-rouge">YYYY-MM-DD-Your-Post-Name.markdown</code></p>
+
+<p>So this is the post I’m going tp make for today:</p>
+
+<p><code class="highlighter-rouge">nano 2016-04-08-Quickguide.markdown</code></p>
+
+<p>In the post we first need to add a YAML header which goes between three dashes at the top of the file.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">---
+layout: post
+title: <span class="s2">"Quick Guide to Posting on the Blog via NeCTAR"</span>
+description: <span class="s2">"This is just a quick guide of the steps I take to post on the blog using a NeCTAR virtual machine"</span>
+author: Cooper B
+categories: nectar jekyll blog github
+---</code></pre></figure>
+
+<p>The layout section tells it to use the post layout. The title is, well, the title of the blog post. The description part is the little blurb that shows on the front page under the title. The author will show up with the date of the post. Categories are like tags that the post is filed under.</p>
+
+<p>Once we’ve done that we can add some content underneath using markdown. <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">This</a> is a good markdown cheatsheet. The main style setup for headers in the blog is header 2 which you can signify by using a double hash <code class="highlighter-rouge">##</code> before a line of text.</p>
+
+<h2 id="testing-out-our-changes">Testing Out Our Changes</h2>
+<p>We can preview our changes with by running <code class="highlighter-rouge">bundle exec jekyll serve</code> from the MQ-FOAR705.github.io folder</p>
+
+<p>Usually this provides a local web server on the loopback device a port 4000 - which we access by opening a web browser and navigating to <a href="http://localhost:4000">http://localhost:4000</a> - However, now we run into a problem where we cannot access the localhost loopback device because we are on a remote virtual machine. The simplest solution to this that I found was to use ngrok.</p>
+
+<p>First lets make sure we are in our home directory using <code class="highlighter-rouge">cd ~</code></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~
+sudo dnf install wget
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+unzip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+chmod +x ngrok</code></pre></figure>
+
+<p>ngrok allows us to pass a localhost port to an ngrok webpage by running <code class="highlighter-rouge">./ngrok 4000</code></p>
+
+<p>However, we want to run ngrok and jekyll serve side by side, so we need to run one as a background process which we can do by adding an ampersand <code class="highlighter-rouge">&amp;</code> after the command. I’ve written a little bash script in the MQ-FOAR705.github.io folder that will automate this process:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> ~/MQ-FOAR705.github.io
+./servejekyll.sh</code></pre></figure>
+
+<p>When you run this script you should get something along the lines of:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">Tunnel Status                 online
+Version                       2.0.25/2.0.25
+Region                        United States <span class="o">(</span>us<span class="o">)</span>
+Web Interface                 http://127.0.0.1:4040
+Forwarding                    http://27326b6e.ngrok.io -&gt; localhost:4000
+Forwarding                    https://27326b6e.ngrok.io -&gt; localhost:4000</code></pre></figure>
+
+<p>Grab the forwarding address, which in this case is <code class="highlighter-rouge">http://27326b6e.ngrok.io</code> - though this will change whenever you run it. Now you can put this in your webbrowser and you should be able to see everything.</p>
+
+<h2 id="making-a-commit">Making a Commit</h2>
+<p>If you are happy with the changes, hit Ctrl+C to close the ngrok command. As we already ran the jekyll serve command alongside ngrok by running the script, then we don’t need to run <code class="highlighter-rouge">bundle exec jekyll build</code> as it will have already done it for us.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git add -A
+git commit -a -m <span class="s2">"my awesome changes"</span>
+git push origin master</code></pre></figure>
+
+<p>Congratulations! Hopefully you have just pushed your first post to the blog and haven’t completely burnt the place down! Don’t worry if you have messed something up - the great thing about github is that it saves all the revisions to the code, so anything drastic that happens we can just rollback to a previous working commit and go from there. But hopefully we wont need to do that :D</p>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <em>FOAR705 Digital Humanities</em>
+          <li><a href="mailto:"></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/MQ-FOAR705"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">MQ-FOAR705</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>This unit explores cross-disciplinary approaches to research that fall under the rubric of ‘digital humanities’,  the aim of which is to use technological tools to solve domain problems. and present results in an accessible way.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
