@@ -6,14 +6,13 @@
 </description>
     <link>mergeandvary.github.io/</link>
     <atom:link href="mergeandvary.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 08 Apr 2016 00:23:35 +0000</pubDate>
-    <lastBuildDate>Fri, 08 Apr 2016 00:23:35 +0000</lastBuildDate>
+    <pubDate>Fri, 08 Apr 2016 00:25:55 +0000</pubDate>
+    <lastBuildDate>Fri, 08 Apr 2016 00:25:55 +0000</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
-        <title>Why do Digital Humanities Projects often use FOSS</title>
-        <description>&lt;h2 id=&quot;why-do-digital-humanities-projects-often-use-open-source-software-tools&quot;&gt;Why do Digital Humanities Projects often use Open Source Software Tools?&lt;/h2&gt;
-&lt;p&gt;In &lt;em&gt;The Magic Cauldron&lt;/em&gt;, Raymond uses rational choice theory to demonstrate why a business might find greater value in preferring open – rather than closed – source software implementations. These arguments for free open source software (FOSS) are built from Raymond’s previous discussion in &lt;em&gt;The Cathedral and the Bazaar&lt;/em&gt; regarding how FOSS ideologies create an effective environment for software development. Many of the points raised by Raymond directly relate to why a researcher might prefer FOSS to solve domain problems in digital humanities projects.&lt;/p&gt;
+        <title>Why do Digital Humanities Projects often use Open Source Software Tools?</title>
+        <description>&lt;p&gt;In &lt;em&gt;The Magic Cauldron&lt;/em&gt;, Raymond uses rational choice theory to demonstrate why a business might find greater value in preferring open – rather than closed – source software implementations. These arguments for free open source software (FOSS) are built from Raymond’s previous discussion in &lt;em&gt;The Cathedral and the Bazaar&lt;/em&gt; regarding how FOSS ideologies create an effective environment for software development. Many of the points raised by Raymond directly relate to why a researcher might prefer FOSS to solve domain problems in digital humanities projects.&lt;/p&gt;
 
 &lt;p&gt;A key point Raymond raises regards constructive laziness: considering that results trump effort, beginning from a partial solution is nearly always preferable to starting from scratch. As FOSS projects are free (as in speech, &lt;em&gt;libre&lt;/em&gt;), they are readily available to be adapted and modified to any specific needs. Raymond observes that it is only through praxis that problems are truly understood: hence, it is likely that initial solutions will be inadequate and require modification or even complete rethinking. With proprietary software this means either being locked into a poor solution (because the code cannot be modified) or expending financial resources on new solutions.  Free (as in beer, &lt;em&gt;gratis&lt;/em&gt;) FOSS tools allow for rapid prototyping, thus rapid failures, and therefore rapidly better solutions without snowballing financial costs.&lt;/p&gt;
 

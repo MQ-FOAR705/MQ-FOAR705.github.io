@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "Why do Digital Humanities Projects often use FOSS"
+title: "Why do Digital Humanities Projects often use Open Source Software Tools?"
 description: "In The Magic Cauldron, Raymond uses rational choice theory to demonstrate why a business might find greater value in preferring open – rather than closed – source software implementations. These arguments for free open source software (FOSS) are built from Raymond's previous discussion in The Cathedral and the Bazaar regarding how FOSS ideologies create an effective environment for software development. Many of the points raised by Raymond directly relate to why a researcher might prefer FOSS to solve domain problems in digital humanities projects."
 categories: digitalhumanities dh writing raymond esr
 author: Cooper B
 ---
 
-## Why do Digital Humanities Projects often use Open Source Software Tools?
 In *The Magic Cauldron*, Raymond uses rational choice theory to demonstrate why a business might find greater value in preferring open – rather than closed – source software implementations. These arguments for free open source software (FOSS) are built from Raymond's previous discussion in *The Cathedral and the Bazaar* regarding how FOSS ideologies create an effective environment for software development. Many of the points raised by Raymond directly relate to why a researcher might prefer FOSS to solve domain problems in digital humanities projects. 
 
 A key point Raymond raises regards constructive laziness: considering that results trump effort, beginning from a partial solution is nearly always preferable to starting from scratch. As FOSS projects are free (as in speech, *libre*), they are readily available to be adapted and modified to any specific needs. Raymond observes that it is only through praxis that problems are truly understood: hence, it is likely that initial solutions will be inadequate and require modification or even complete rethinking. With proprietary software this means either being locked into a poor solution (because the code cannot be modified) or expending financial resources on new solutions.  Free (as in beer, *gratis*) FOSS tools allow for rapid prototyping, thus rapid failures, and therefore rapidly better solutions without snowballing financial costs. 
