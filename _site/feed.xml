@@ -6,8 +6,8 @@
 </description>
     <link>MQ-FOAR705.github.io/</link>
     <atom:link href="MQ-FOAR705.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 08 Apr 2016 02:47:40 +0000</pubDate>
-    <lastBuildDate>Fri, 08 Apr 2016 02:47:40 +0000</lastBuildDate>
+    <pubDate>Fri, 08 Apr 2016 04:45:45 +0000</pubDate>
+    <lastBuildDate>Fri, 08 Apr 2016 04:45:45 +0000</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
@@ -39,6 +39,36 @@ For Raymond, FOSS is particularly valuable when projects require independent pee
         <category>raymond</category>
         
         <category>esr</category>
+        
+      </item>
+    
+      <item>
+        <title>This is David demonstrating github commits</title>
+        <description>&lt;p&gt;This is David, from David’s Machine, talking to you over the series of pipes!&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This is italic&lt;/em&gt; and the asterisk is a symbol of the markdown markup language.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;this is underlined&lt;/em&gt; and the underscore is a symbol of the markdown markup language.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 08 Apr 2016 00:00:00 +0000</pubDate>
+        <link>MQ-FOAR705.github.io/techdemo/2016/04/08/Hello-From-David.html</link>
+        <guid isPermaLink="true">MQ-FOAR705.github.io/techdemo/2016/04/08/Hello-From-David.html</guid>
+        
+        
+        <category>techDemo</category>
+        
+      </item>
+    
+      <item>
+        <title>This is Brian demonstrating github commits</title>
+        <description>&lt;p&gt;This is Brian, from Penny’s Machine, talking to you over the series of pipes!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 08 Apr 2016 00:00:00 +0000</pubDate>
+        <link>MQ-FOAR705.github.io/techdemo/2016/04/08/Hello-From-Brian.html</link>
+        <guid isPermaLink="true">MQ-FOAR705.github.io/techdemo/2016/04/08/Hello-From-Brian.html</guid>
+        
+        
+        <category>techDemo</category>
         
       </item>
     
@@ -184,7 +214,7 @@ git push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;sudo dnf install ruby-devel
 sudo dnf install redhat-rpm-config
-sudo gem install jekyll&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+gem install jekyll&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Installing Jekyll on Fedora was a breeze.&lt;/p&gt;
 

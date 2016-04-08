@@ -16,7 +16,7 @@ This is my first foray into the world of Jekyll so I will be documenting my prog
 {% highlight html %}
 sudo dnf install ruby-devel
 sudo dnf install redhat-rpm-config
-sudo gem install jekyll
+gem install jekyll
 {% endhighlight %}
 
 Installing Jekyll on Fedora was a breeze.
