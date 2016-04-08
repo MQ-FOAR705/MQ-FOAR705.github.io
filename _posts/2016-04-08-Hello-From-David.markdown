@@ -7,3 +7,7 @@ author: Brian
 ---
 
 This is David, from David's Machine, talking to you over the series of pipes!
+
+*This is italic* and the asterisk is a symbol of the markdown markup language.
+
+_this is underlined_ and the underscore is a symbol of the markdown markup language.
