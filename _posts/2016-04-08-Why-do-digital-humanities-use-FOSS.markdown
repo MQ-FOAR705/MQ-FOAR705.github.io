@@ -5,6 +5,8 @@ description: "In The Magic Cauldron, Raymond uses rational choice theory to demo
 categories: digitalhumanities dh writing raymond esr
 author: Cooper B
 ---
+![Open Source Water](https://farm1.staticflickr.com/7/8903529_2824fb78cc_z.jpg)
+<small>Source: Niels Heidenreich</small>
 
 In *The Magic Cauldron*, Raymond uses rational choice theory to demonstrate why a business might find greater value in preferring open – rather than closed – source software implementations. These arguments for free open source software (FOSS) are built from Raymond's previous discussion in *The Cathedral and the Bazaar* regarding how FOSS ideologies create an effective environment for software development. Many of the points raised by Raymond directly relate to why a researcher might prefer FOSS to solve domain problems in digital humanities projects. 
 
