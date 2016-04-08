@@ -5,7 +5,7 @@ description: "In The Magic Cauldron, Raymond uses rational choice theory to demo
 categories: digitalhumanities dh writing raymond esr
 author: Cooper B
 ---
-![Open Source Water](https://farm1.staticflickr.com/7/8903529_2824fb78cc_z.jpg)
+![Open Source Water](http://i.imgur.com/zUzImht.jpg)
 
 <small>Source: Niels Heidenreich</small>
 
