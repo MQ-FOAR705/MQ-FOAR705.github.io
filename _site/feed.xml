@@ -6,8 +6,8 @@
 </description>
     <link>MQ-FOAR705.github.io/</link>
     <atom:link href="MQ-FOAR705.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 09 Apr 2016 11:22:49 +1000</pubDate>
-    <lastBuildDate>Sat, 09 Apr 2016 11:22:49 +1000</lastBuildDate>
+    <pubDate>Sat, 09 Apr 2016 14:47:55 +1000</pubDate>
+    <lastBuildDate>Sat, 09 Apr 2016 14:47:55 +1000</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
@@ -88,7 +88,7 @@ categories: nectar jekyll blog github
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~
 sudo dnf install wget
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-unzip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+unzip ngrok-stable-linux-amd64.zip
 chmod +x ngrok&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;ngrok allows us to pass a localhost port to an ngrok webpage by running &lt;code class=&quot;highlighter-rouge&quot;&gt;./ngrok 4000&lt;/code&gt;&lt;/p&gt;

@@ -86,7 +86,7 @@ First lets make sure we are in our home directory using `cd ~`
 cd ~
 sudo dnf install wget
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-unzip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+unzip ngrok-stable-linux-amd64.zip
 chmod +x ngrok
 {% endhighlight %}
 
